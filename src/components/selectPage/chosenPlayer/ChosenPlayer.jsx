@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
-import Square from '../../square/Square'
+import Box from '../../box/Box'
 import H3 from '../../typography/h3'
 
 const AlignChosen = styled.div`
   display: flex;
-  justify-content: space-around;
-  margin: 40px 0;
+  justify-content: center;
+  gap: 170px;
+  margin: 50px 0;
 `
 
 const BoxSelect = styled.div`
@@ -21,11 +22,11 @@ function ChosenPlayer() {
   return (
     <AlignChosen>
       <BoxSelect>
-        <Square size="100px" />
+        <Box size="100px" />
         <TextAlign>Player 1</TextAlign>
       </BoxSelect>
       <BoxSelect>
-        <Square size="100px" />
+        <Box size="100px" />
         <TextAlign>Player 2</TextAlign>
       </BoxSelect>
     </AlignChosen>
