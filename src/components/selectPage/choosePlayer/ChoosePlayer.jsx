@@ -3,8 +3,6 @@ import H3 from '../../typography/h3'
 
 const StyledH3 = styled(H3)`
   color: ${(props) => props.theme.colors.green};
-  text-align: center;
-  margin: 40px 0;
 `
 
 function ChoosePlayer() {

@@ -6,10 +6,21 @@ const AlighChoice = styled.div`
   display: flex;
   justify-content: center;
   gap: 50px;
+
+  @media screen and (max-width: 570px) {
+    gap: 20px;
+  }
+
+  @media screen and (max-width: 430px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 `
 
 const BoxOfChoice = styled.div`
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 function PlayerIcon() {

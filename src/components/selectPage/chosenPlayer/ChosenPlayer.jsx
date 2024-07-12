@@ -7,7 +7,13 @@ const AlignChosen = styled.div`
   display: flex;
   justify-content: center;
   gap: 170px;
-  margin: 50px 0;
+
+  @media screen and (max-width: 570px) {
+    gap: 120px;
+  }
+  @media screen and (max-width: 430px) {
+    gap: 60px;
+  }
 `
 
 const BoxSelect = styled.div`
