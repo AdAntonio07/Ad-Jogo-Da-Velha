@@ -6,6 +6,7 @@ const StyledButton = styled.button`
   font-size: 20px;
   font-weight: bold;
   border: 2px solid;
+  cursor: pointer;
   color: ${(props) => props.theme.colors.green};
   background-color: ${(props) => props.theme.colors.purple};
 `

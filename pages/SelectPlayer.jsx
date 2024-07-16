@@ -1,9 +1,7 @@
 import styled from 'styled-components'
 
-import GameTitle from '../src/components/gameTitle/GameTitle'
-import ChosenPlayer from '../src/components/selectPage/chosenPlayer/ChosenPlayer'
-import ChoosePlayer from '../src/components/selectPage/choosePlayer/ChoosePlayer'
-import PlayerIcon from '../src/components/selectPage/playerIcon/PlayerIcon'
+import Header from '../src/components/header/Header'
+import SelectPlay from '../src/components/selectPage/selectPlay/SelectPlay'
 import Button from '../src/components/button/Button'
 
 import Container from '../src/components/selectPage/Container'
@@ -19,10 +17,8 @@ function SelectPlayer() {
   return (
     <Container>
       <SyteledAligh>
-        <GameTitle />
-        <ChosenPlayer />
-        <ChoosePlayer />
-        <PlayerIcon />
+        <Header />
+        <SelectPlay />
         <Button>Jogar</Button>
       </SyteledAligh>
     </Container>

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import Box from '../../box/Box'
+import Box from '../box/Box'
 import H3 from '../../typography/h3'
 
 const AlignChosen = styled.div`

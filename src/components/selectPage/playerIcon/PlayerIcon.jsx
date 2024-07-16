@@ -27,19 +27,19 @@ function PlayerIcon() {
   return (
     <AlighChoice>
       <BoxOfChoice>
-        <BoxSelect iconName="Triangulo" />
+        <BoxSelect iconName="Triangulo" onClick={console.log('Clicou em triangulo')} />
         <H6>Triangulo</H6>
       </BoxOfChoice>
       <BoxOfChoice>
-        <BoxSelect iconName="Quadrado" />
+        <BoxSelect iconName="Quadrado" onClick={console.log('Clicou em quadrado')} />
         <H6>Quadrado</H6>
       </BoxOfChoice>
       <BoxOfChoice>
-        <BoxSelect iconName="Circulo" />
+        <BoxSelect iconName="Circulo" onClick={console.log('Clicou em circulo')} />
         <H6>Circulo</H6>
       </BoxOfChoice>
       <BoxOfChoice>
-        <BoxSelect iconName="X" />
+        <BoxSelect iconName="X" onClick={console.log('Clicou em x')} />
         <H6>X</H6>
       </BoxOfChoice>
     </AlighChoice>
