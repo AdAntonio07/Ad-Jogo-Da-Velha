@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import ChosenPlayer from '../chosenPlayer/ChosenPlayer'
 import ChoosePlayer from '../choosePlayer/ChoosePlayer'
 import PlayerIcon from '../playerIcon/PlayerIcon'
@@ -5,9 +7,9 @@ import PlayerIcon from '../playerIcon/PlayerIcon'
 function SelectPlay() {
   return (
     <>
-      <ChosenPlayer />
+      <ChosenPlayer play1={2} play2={3} />
       <ChoosePlayer />
-      <PlayerIcon />
+      <PlayerIcon onClick={console.log('CLICOU AQUI')} />
     </>
   )
 }

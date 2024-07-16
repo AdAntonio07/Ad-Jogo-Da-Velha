@@ -6,6 +6,9 @@ const Box = styled.div`
   border: 4px solid;
   border-color: ${(props) => props.theme.colors.purple};
   border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media screen and (max-width: 430px) {
     width: 80px;

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import H6 from '../../typography/H6'
-import BoxSelect from '../boxSelect/BoxSelec'
+import Box from '../box/Box'
+import Icon from '../../icon/Icon'
 
 const AlighChoice = styled.div`
   display: flex;
@@ -17,29 +18,42 @@ const AlighChoice = styled.div`
   }
 `
 
+const StyledBox = styled(Box)`
+  margin-bottom: 5px;
+  cursor: pointer;
+`
+
 const BoxOfChoice = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 `
 
-function PlayerIcon() {
+function PlayerIcon({ onClick }) {
   return (
     <AlighChoice>
       <BoxOfChoice>
-        <BoxSelect iconName="Triangulo" onClick={console.log('Clicou em triangulo')} />
+        <StyledBox>
+          <Icon iconName="Triangulo" onClick={onClick} />
+        </StyledBox>
         <H6>Triangulo</H6>
       </BoxOfChoice>
       <BoxOfChoice>
-        <BoxSelect iconName="Quadrado" onClick={console.log('Clicou em quadrado')} />
+        <StyledBox>
+          <Icon iconName="Quadrado" onClick={onClick} />
+        </StyledBox>
         <H6>Quadrado</H6>
       </BoxOfChoice>
       <BoxOfChoice>
-        <BoxSelect iconName="Circulo" onClick={console.log('Clicou em circulo')} />
+        <StyledBox>
+          <Icon iconName="Circulo" onClick={onClick} />
+        </StyledBox>
         <H6>Circulo</H6>
       </BoxOfChoice>
       <BoxOfChoice>
-        <BoxSelect iconName="X" onClick={console.log('Clicou em x')} />
+        <StyledBox>
+          <Icon iconName="X" onClick={onClick} />
+        </StyledBox>
         <H6>X</H6>
       </BoxOfChoice>
     </AlighChoice>
