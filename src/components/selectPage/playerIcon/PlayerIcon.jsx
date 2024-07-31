@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import styled from 'styled-components'
 import H6 from '../../typography/H6'
 import Box from '../box/Box'
@@ -17,42 +19,47 @@ const AlighChoice = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
 `
-
 const StyledBox = styled(Box)`
   margin-bottom: 5px;
   cursor: pointer;
 `
-
 const BoxOfChoice = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 `
 
-function PlayerIcon({ onClick }) {
+const PlayerIcon = ({ onSelectIcon }) => {
+  const [selectIcon, setSelectIcon] = useState(null)
+
+  const handleIconClick = (iconName) => {
+    setSelectIcon(iconName)
+    onSelectIcon(iconName)
+  }
+
   return (
     <AlighChoice>
       <BoxOfChoice>
-        <StyledBox>
-          <Icon iconName="Triangulo" onClick={onClick} />
+        <StyledBox onClick={() => handleIconClick('Triangulo')}>
+          <Icon iconName="Triangulo" />
         </StyledBox>
         <H6>Triangulo</H6>
       </BoxOfChoice>
       <BoxOfChoice>
-        <StyledBox>
-          <Icon iconName="Quadrado" onClick={onClick} />
+        <StyledBox onClick={() => handleIconClick('Quadrado')}>
+          <Icon iconName="Quadrado" />
         </StyledBox>
         <H6>Quadrado</H6>
       </BoxOfChoice>
       <BoxOfChoice>
-        <StyledBox>
-          <Icon iconName="Circulo" onClick={onClick} />
+        <StyledBox onClick={() => handleIconClick('Circulo')}>
+          <Icon iconName="Circulo" />
         </StyledBox>
         <H6>Circulo</H6>
       </BoxOfChoice>
       <BoxOfChoice>
-        <StyledBox>
-          <Icon iconName="X" onClick={onClick} />
+        <StyledBox onClick={() => handleIconClick('X')}>
+          <Icon iconName="X" />
         </StyledBox>
         <H6>X</H6>
       </BoxOfChoice>

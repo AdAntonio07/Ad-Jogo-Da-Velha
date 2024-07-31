@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import Header from '../src/components/header/Header'
-import SelectPlay from '../src/components/selectPage/selectPlay/SelectPlay'
+import SelectIcon from '../src/components/selectPage/selectIcon/SelectIcon'
 import Button from '../src/components/button/Button'
 
 import Container from '../src/components/selectPage/Container'
@@ -18,7 +18,7 @@ function SelectPlayer() {
     <Container>
       <SyteledAligh>
         <Header />
-        <SelectPlay />
+        <SelectIcon />
         <Button>Jogar</Button>
       </SyteledAligh>
     </Container>

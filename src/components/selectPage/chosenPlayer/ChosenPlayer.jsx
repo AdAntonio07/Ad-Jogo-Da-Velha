@@ -16,36 +16,24 @@ const AlignChosen = styled.div`
     gap: 60px;
   }
 `
-
 const BoxSelect = styled.div`
   text-align: center;
 `
-
 const TextAlign = styled(H3)`
   padding-top: 8px;
 `
-const PlayIcon = ({ iconName }) => <Icon iconName={iconName} size="80px" />
+const PlayIcon = ({ iconName }) => <Icon iconName={iconName} size="100px" />
 
 function ChosenPlayer({ play1, play2 }) {
   return (
     <AlignChosen>
       <BoxSelect>
-        <Box size="100px">
-          {play1 === 1 && <PlayIcon iconName="Triangulo" />}
-          {play1 === 2 && <PlayIcon iconName="Quadrado" />}
-          {play1 === 3 && <PlayIcon iconName="Circulo" />}
-          {play1 === 4 && <PlayIcon iconName="X" />}
-        </Box>
-        <TextAlign>Player 1</TextAlign>
+        <Box size="120px">{play1 && <PlayIcon iconName={play1} />}</Box>
+        <TextAlign>Play 1</TextAlign>
       </BoxSelect>
       <BoxSelect>
-        <Box size="100px">
-          {play2 === 1 && <PlayIcon iconName="Triangulo" />}
-          {play2 === 2 && <PlayIcon iconName="Quadrado" />}
-          {play2 === 3 && <PlayIcon iconName="Circulo" />}
-          {play2 === 4 && <PlayIcon iconName="X" />}
-        </Box>
-        <TextAlign>Player 2</TextAlign>
+        <Box size="120px">{play2 && <PlayIcon iconName={play2} />}</Box>
+        <TextAlign>Play 2</TextAlign>
       </BoxSelect>
     </AlignChosen>
   )
