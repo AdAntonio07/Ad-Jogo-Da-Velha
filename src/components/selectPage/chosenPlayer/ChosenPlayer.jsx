@@ -22,7 +22,7 @@ const BoxSelect = styled.div`
 const TextAlign = styled(H3)`
   padding-top: 8px;
 `
-const PlayIcon = ({ iconName }) => <Icon iconName={iconName} size="100px" />
+const PlayIcon = ({ iconName }) => <Icon iconName={iconName} size="80%" />
 
 function ChosenPlayer({ play1, play2 }) {
   return (

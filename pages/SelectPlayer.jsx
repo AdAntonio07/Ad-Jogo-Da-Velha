@@ -17,7 +17,7 @@ function SelectPlayer() {
   return (
     <Container>
       <SyteledAligh>
-        <Header />
+        <Header size="100%" />
         <SelectIcon />
         <Button>Jogar</Button>
       </SyteledAligh>
