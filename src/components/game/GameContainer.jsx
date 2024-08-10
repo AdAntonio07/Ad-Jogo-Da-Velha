@@ -5,11 +5,11 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
 `
 const Children = styled.div`
   max-width: 650px;
   width: 100%;
+  background-color: #a9a8ac;
 `
 
 function GameContainer({ children }) {
