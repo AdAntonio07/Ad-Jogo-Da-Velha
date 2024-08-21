@@ -10,7 +10,7 @@ const AlignChosen = styled.div`
   gap: 170px;
 
   @media screen and (max-width: 570px) {
-    gap: 120px;
+    gap: 90px;
   }
   @media screen and (max-width: 430px) {
     gap: 60px;

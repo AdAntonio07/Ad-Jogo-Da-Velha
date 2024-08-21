@@ -1,11 +1,16 @@
 import styled from 'styled-components'
 import H3 from '../../typography/h3'
 
-const StyledH3 = styled(H3)`
+const StyledH3 = styled.h2`
   color: ${(props) => props.theme.colors.green};
+  font-size: 28px;
+
+  @media screen and (max-width: 430px) {
+    font-size: 18px;
+  }
 `
 
-function ChoosePlayer({ status }) {
+function ChoosePlayer() {
   return <StyledH3>Escolha o Icone do Jogador</StyledH3>
 }
 

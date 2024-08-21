@@ -1,22 +1,17 @@
 import styled from 'styled-components'
 
 const StyledContainer = styled.div`
-  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 30px;
-`
-const StyledChildren = styled.div`
-  max-width: 600px;
+  height: 100%;
+  min-height: 100vh;
+  padding: 20px 0;
 `
 
 function Container({ children }) {
-  return (
-    <StyledContainer>
-      <StyledChildren>{children}</StyledChildren>
-    </StyledContainer>
-  )
+  return <StyledContainer>{children}</StyledContainer>
 }
 
 export default Container

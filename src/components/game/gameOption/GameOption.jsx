@@ -14,7 +14,7 @@ const StyledOption = styled.div`
 function GameOption() {
   return (
     <StyledOption>
-      <Icon iconName="Triangulo" />
+      <Icon iconName="X" />
     </StyledOption>
   )
 }
