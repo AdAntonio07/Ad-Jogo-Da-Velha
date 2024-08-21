@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Link from 'next/link'
 
 const StyledButton = styled.button`
   padding: 13px 50px;
@@ -11,8 +12,8 @@ const StyledButton = styled.button`
   background-color: ${(props) => props.theme.colors.purple};
 `
 
-function Button({ children }) {
-  return <StyledButton>{children}</StyledButton>
+function Button({ onClick }) {
+  return <StyledButton onClick={onClick}>Jogar</StyledButton>
 }
 
 export default Button

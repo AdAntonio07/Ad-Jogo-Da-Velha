@@ -5,11 +5,10 @@ const StyledContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 30px;
 `
 const StyledChildren = styled.div`
   max-width: 600px;
-  width: 100%;
 `
 
 function Container({ children }) {

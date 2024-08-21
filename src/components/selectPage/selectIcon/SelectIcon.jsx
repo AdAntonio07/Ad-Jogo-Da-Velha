@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Link from 'next/link'
 
 import ChosenPlayer from '../chosenPlayer/ChosenPlayer'
 import ChoosePlayer from '../choosePlayer/ChoosePlayer'
@@ -18,9 +19,11 @@ function SelectPlay() {
 
   return (
     <>
-      <ChosenPlayer play1={playUm} play2={playDois} />
-      <ChoosePlayer />
-      <PlayerIcon onSelectIcon={handleSelectIcon} />
+      <>
+        <ChosenPlayer play1={playUm} play2={playDois} />
+        <ChoosePlayer />
+        <PlayerIcon onSelectIcon={handleSelectIcon} />
+      </>
     </>
   )
 }

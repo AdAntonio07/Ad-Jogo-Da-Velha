@@ -1,12 +1,13 @@
-import GameContainer from '../src/components/game/GameContainer'
-import GameHeader from '../src/components/game/gameHeader/GameHeader'
-import GameLayout from '../src/components/game/gameLayout/GameLayout'
+import Header from '../src/components/header/Header'
+import SelectPlayer from '../src/components/selectPage/selectPlayer/SelectPlayer'
+import Container from '../src/components/container/Container'
+
 function HomePage() {
   return (
-    <GameContainer>
-      <GameHeader />
-      <GameLayout />
-    </GameContainer>
+    <Container>
+      <Header />
+      <SelectPlayer />
+    </Container>
   )
 }
 
