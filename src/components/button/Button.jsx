@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-import Link from 'next/link'
 
 const StyledButton = styled.button`
-  padding: 13px 50px;
+  width: ${(props) => props.width || '200px'};
+  height: ${(props) => props.height || '55px'};
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   border: 2px solid;
   cursor: pointer;
@@ -12,8 +12,8 @@ const StyledButton = styled.button`
   background-color: ${(props) => props.theme.colors.purple};
 `
 
-function Button({ onClick }) {
-  return <StyledButton onClick={onClick}>Jogar</StyledButton>
+function Button({ onClick, children }) {
+  return <StyledButton onClick={onClick}>{children}</StyledButton>
 }
 
 export default Button

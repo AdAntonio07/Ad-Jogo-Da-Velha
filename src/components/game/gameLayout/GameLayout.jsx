@@ -19,14 +19,23 @@ const GameContainer = styled.div`
 
 function GameLayout() {
   const [gameState, setGameState] = useState(Array(9).fill(0))
-  console.log(gameState)
+  const [currentPlayer, setCurrentPlayer] = useState(-1)
+
+  const HandleClick = (pos) => {
+    if (gameState[pos] === 0) {
+      let NewGameState = [...gameState]
+      NewGameState[pos] = currentPlayer
+      setGameState(NewGameState)
+      setCurrentPlayer(currentPlayer * -1)
+    }
+  }
 
   return (
     <GameContainer>
       <Icon iconName="JogoDaVelha" size="250px" />
       <GamePosition>
         {gameState.map((valeu, pos) => (
-          <GameOption key={`game-option-${pos}`} status={valeu} />
+          <GameOption key={`game-option-${pos}`} status={valeu} onClick={() => HandleClick(pos)} />
         ))}
       </GamePosition>
     </GameContainer>

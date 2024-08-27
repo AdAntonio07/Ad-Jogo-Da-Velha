@@ -11,7 +11,7 @@ const StyledH3 = styled.h2`
 `
 
 function ChoosePlayer() {
-  return <StyledH3>Escolha o Icone do Jogador</StyledH3>
+  return <StyledH3>Escolha o Icone de cada Jogador</StyledH3>
 }
 
 export default ChoosePlayer

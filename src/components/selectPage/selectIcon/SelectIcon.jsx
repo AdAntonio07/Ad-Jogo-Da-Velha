@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import Link from 'next/link'
 
 import ChosenPlayer from '../chosenPlayer/ChosenPlayer'
 import ChoosePlayer from '../choosePlayer/ChoosePlayer'
 import PlayerIcon from '../playerIcon/PlayerIcon'
+import Button from '../../button/Button'
 
-function SelectPlay() {
+function SelectPlay({ onClick }) {
   const [playUm, setPlayUm] = useState(null)
   const [playDois, setplayDois] = useState(null)
 
@@ -19,11 +19,10 @@ function SelectPlay() {
 
   return (
     <>
-      <>
-        <ChosenPlayer play1={playUm} play2={playDois} />
-        <ChoosePlayer />
-        <PlayerIcon onSelectIcon={handleSelectIcon} />
-      </>
+      <ChosenPlayer play1={playUm} play2={playDois} />
+      <ChoosePlayer />
+      <PlayerIcon onSelectIcon={handleSelectIcon} />
+      <Button onClick={onClick}>Jogar</Button>
     </>
   )
 }

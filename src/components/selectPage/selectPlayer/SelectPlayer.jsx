@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 import SelectIcon from '../selectIcon/SelectIcon'
-import Button from '../button/Button'
 
 const SyteledAligh = styled.div`
   display: flex;
@@ -14,8 +13,7 @@ function SelectPlayer({ onClick }) {
   return (
     <>
       <SyteledAligh>
-        <SelectIcon />
-        <Button onClick={onClick} />
+        <SelectIcon onClick={onClick} />
       </SyteledAligh>
     </>
   )
