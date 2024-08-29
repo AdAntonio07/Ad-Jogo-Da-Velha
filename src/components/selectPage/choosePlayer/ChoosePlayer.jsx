@@ -1,7 +1,6 @@
 import styled from 'styled-components'
-import H3 from '../../typography/h3'
 
-const StyledH3 = styled.h2`
+const StyledH2 = styled.h2`
   color: ${(props) => props.theme.colors.green};
   font-size: 28px;
 
@@ -11,7 +10,7 @@ const StyledH3 = styled.h2`
 `
 
 function ChoosePlayer() {
-  return <StyledH3>Escolha o Icone de cada Jogador</StyledH3>
+  return <StyledH2>Escolha o Icone de cada Jogador</StyledH2>
 }
 
 export default ChoosePlayer

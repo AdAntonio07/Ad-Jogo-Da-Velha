@@ -22,7 +22,9 @@ function SelectPlay({ onClick }) {
       <ChosenPlayer play1={playUm} play2={playDois} />
       <ChoosePlayer />
       <PlayerIcon onSelectIcon={handleSelectIcon} />
-      <Button onClick={onClick}>Jogar</Button>
+      <Button player1={playUm} player2={playDois} onClick={onClick}>
+        Jogar
+      </Button>
     </>
   )
 }
