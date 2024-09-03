@@ -22,7 +22,7 @@ const GameContainer = styled.div`
   height: 250px;
 `
 
-function GameLayout() {
+function GameLayout({ play1, play2 }) {
   const [gameState, setGameState] = useState(Array(9).fill(0))
   const [currentPlayer, setCurrentPlayer] = useState(-1)
 
@@ -45,6 +45,8 @@ function GameLayout() {
               key={`game-option-${pos}`}
               status={valeu}
               onClick={() => HandleClick(pos)}
+              play1={play1}
+              play2={play2}
             />
           ))}
         </GamePosition>

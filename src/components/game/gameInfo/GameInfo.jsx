@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Button from '../../button/Button'
+import GameButton from '../gameButton/GameButton'
 
 const GameProximo = styled.div`
   display: flex;
@@ -24,7 +24,7 @@ function GameInfo({ currentPlay, player1, player2 }) {
         {currentPlay === -1 && player2}
       </>
 
-      <Button sizew="100">Reniciar</Button>
+      <GameButton sizew="100">Reniciar</GameButton>
     </GameProximo>
   )
 }

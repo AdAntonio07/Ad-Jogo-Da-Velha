@@ -1,9 +1,7 @@
-import { useState } from 'react'
 import styled from 'styled-components'
 
 const StyledButton = styled.button`
-  width: 150px;
-  height: 50px;
+  padding: 5px 25px;
   border-radius: 8px;
   font-size: 25px;
   font-weight: bold;
@@ -13,8 +11,8 @@ const StyledButton = styled.button`
   background-color: ${(props) => props.theme.colors.purple};
 `
 
-function Button({ onClick, children }) {
-  return <StyledButton onClick={onClick}>{children}</StyledButton>
+function Button({ onClick }) {
+  return <StyledButton onClick={onClick}>Reiniciar</StyledButton>
 }
 
 export default Button

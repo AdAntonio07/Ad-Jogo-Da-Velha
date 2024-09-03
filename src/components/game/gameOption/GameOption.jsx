@@ -11,11 +11,11 @@ const StyledOption = styled.div`
   cursor: pointer;
 `
 
-function GameOption({ onClick, status, player1, player2 }) {
+function GameOption({ onClick, status, play1, play2 }) {
   return (
     <StyledOption onClick={onClick}>
-      {status === 1 && <Icon iconName="Triangulo" />}
-      {status === -1 && <Icon iconName="X" />}
+      {status === 1 && <Icon iconName={play1} />}
+      {status === -1 && <Icon iconName={play2} />}
     </StyledOption>
   )
 }
