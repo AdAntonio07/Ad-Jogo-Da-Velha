@@ -9,10 +9,20 @@ const StyledButton = styled.button`
   cursor: pointer;
   color: ${(props) => props.theme.colors.green};
   background-color: ${(props) => props.theme.colors.purple};
+
+  &:disabled {
+    cursor: default;
+    color: #256240;
+    background-color: #3a1844;
+  }
 `
 
-function Button({ onClick }) {
-  return <StyledButton onClick={onClick}>Jogar</StyledButton>
+function Button({ onClick, disabled }) {
+  return (
+    <StyledButton onClick={onClick} disabled={disabled}>
+      Jogar
+    </StyledButton>
+  )
 }
 
 export default Button

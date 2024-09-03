@@ -2,12 +2,14 @@ import ChoosePlayer from '../choosePlayer/ChoosePlayer'
 import PlayerIcon from '../playerIcon/PlayerIcon'
 import Button from '../button/Button'
 
-function SelectPlay({ onClick, handleSelectIcon }) {
+function SelectPlay({ onClick, disabled, handleSelectIcon }) {
   return (
     <>
       <ChoosePlayer />
       <PlayerIcon onSelectIcon={handleSelectIcon} />
-      <Button onClick={onClick}>Jogar</Button>
+      <Button onClick={onClick} disabled={disabled}>
+        Jogar
+      </Button>
     </>
   )
 }

@@ -30,6 +30,10 @@ function HomePage() {
     }
   }
 
+  const handleDisabled = () => {
+    if (playDois) return true
+  }
+
   const mostraComponent = () => {
     setIsVisible(true)
   }
@@ -40,7 +44,11 @@ function HomePage() {
       <StyledSelect>
         {!isVisible && <ChosenPlayer play1={playUm} play2={playDois} />}
         {!isVisible && (
-          <SelectPlayer onClick={mostraComponent} handleSelectIcon={handleSelectIcon} />
+          <SelectPlayer
+            onClick={mostraComponent}
+            disabled={!handleDisabled()}
+            handleSelectIcon={handleSelectIcon}
+          />
         )}
       </StyledSelect>
       {isVisible && <GameLayout play1={playUm} play2={playDois} />}

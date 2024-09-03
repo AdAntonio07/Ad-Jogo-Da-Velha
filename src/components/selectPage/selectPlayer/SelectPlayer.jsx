@@ -9,11 +9,11 @@ const SyteledAligh = styled.div`
   gap: 40px;
 `
 
-function SelectPlayer({ onClick, handleSelectIcon }) {
+function SelectPlayer({ onClick, disabled, handleSelectIcon }) {
   return (
     <>
       <SyteledAligh>
-        <SelectIcon onClick={onClick} handleSelectIcon={handleSelectIcon} />
+        <SelectIcon onClick={onClick} disabled={disabled} handleSelectIcon={handleSelectIcon} />
       </SyteledAligh>
     </>
   )
